@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Set Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Target length in seconds</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @set_lists.each do |set_list| %>
+      <tr>
+        <td><%= set_list.target_length_in_seconds %></td>
+        <td><%= link_to 'Show', set_list %></td>
+        <td><%= link_to 'Edit', edit_set_list_path(set_list) %></td>
+        <td><%= link_to 'Destroy', set_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Set list', new_set_list_path %>
