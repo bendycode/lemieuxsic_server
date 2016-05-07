@@ -4,10 +4,12 @@ RSpec.describe "set_lists/index", type: :view do
   before(:each) do
     assign(:set_lists, [
       SetList.create!(
-        :target_length_in_seconds => 1
+        target_length_in_seconds: 1,
+        name: "Rock the house!"
       ),
       SetList.create!(
-        :target_length_in_seconds => 1
+        target_length_in_seconds: 1,
+        name: "Rock the other house!"
       )
     ])
   end

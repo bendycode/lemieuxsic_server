@@ -24,7 +24,10 @@ RSpec.describe SetListsController, type: :controller do
   # SetList. As you add validations to SetList, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    { target_length_in_seconds: 2700 }
+    {
+      name: 'Rock the house',
+      target_length_in_seconds: 2700
+    }
   }
 
   let(:invalid_attributes) {

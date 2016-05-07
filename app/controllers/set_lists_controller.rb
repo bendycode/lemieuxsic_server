@@ -69,6 +69,6 @@ class SetListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def set_list_params
-      params.require(:set_list).permit(:target_length_in_seconds)
+      params.require(:set_list).permit(:name, :target_length_in_seconds)
     end
 end
