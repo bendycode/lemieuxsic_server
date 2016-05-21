@@ -4,7 +4,11 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+    # respond_to do |format|
+      # format.html { @songs = Song.all }
+      # format.json { render json: {songs: Song.all} }
+    # end
+    render json: {songs: Song.all}
   end
 
   # GET /songs/1
