@@ -4,7 +4,8 @@ class SetListsController < ApplicationController
   # GET /set_lists
   # GET /set_lists.json
   def index
-    @set_lists = SetList.all
+    # @set_lists = SetList.all
+    render json: {:'set-lists' => SetList.all}
   end
 
   # GET /set_lists/1
